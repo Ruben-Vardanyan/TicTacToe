@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta property="og:title" content="My Calculator">
+	<title>TicTacToe</title>
+	<link rel="icon" sizes="32x32" type="image/png" href="titleImg.png">
+	<meta property="og:description" content="Calculator Demo">
+	<meta name="description" content="By Ruben Vardanyan">
+	<meta name="theme-color" content="#131417">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&amp;display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="twoplayer.css">
+    <link rel="stylesheet" href="phone.css">
+    <link rel="stylesheet" href="loader.css">
+
+</head>
+<body>
+    <!-- loader -->
+    <div class="loader-wrapper"  >
+        <div class="loader-inner">
+            <img class="s1" src="LogoL.png" alt="">
+        </div>
+    </div>
+    <!-- loader end -->
+    <div class="content">
+        <a class="abs-box" href="https://ruben-vardanyan.github.io/MyLibrary/">
+			<img src="LogoL.png">
+		</a>
+        <div class="mainTable">
+            <div class="bgTable"></div>
+            <div class="mainCell">X</div>
+            <div class="mainCell">O</div>
+            <div class="mainCell">O</div>
+            <div class="mainCell">X</div>
+        </div>
+        <h1>Tic Tac Toe</h1>
+        <!-- <button id="onePlayer">One Player</button> -->
+        <button id="twoPlayer">Two Player</button>
+        <h3>&copy; My Library 2022</h3>
+    </div>
+
+
+
+
+    <script src="menuPage.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(window).on("load",function(){
+            $(".loader-wrapper").fadeOut("slow");
+        });
+    </script>
+</body>
+</html>

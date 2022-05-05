@@ -1,0 +1,61 @@
+.countBox{
+    width: 80%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15px;
+    margin-bottom: 10%;
+    font-size: 40px;
+    font-weight: 800;
+}
+.countBox div{
+    width: 45%;
+    display: flex;
+    justify-content: center;
+}
+.bgSpan{
+    display: inline-block;
+    width: 50px;
+    height: 100%;
+    background: #2c303a;
+    border-radius: 10px;
+    text-align: center;
+    margin: 0 5px;
+}
+.Xcount{
+    color: #47cf73;
+}
+.Ocount{
+    color: #26c5c6;
+}
+
+.gameTable{
+    display: grid;
+	grid-template-columns: repeat(3,auto);
+	width: 240px;
+	position: relative;
+    margin: 10% 0 20% 0;
+}
+.gameTable .cell{
+    display: block;
+    width: 80px;
+    height: 80px;
+    font-size: 80px;
+    border: 2px solid #fff;
+    line-height: 77px;
+    text-align: center;
+    box-shadow: 0 0 0 2px #fff;
+}
+
+#quit , #restart{
+    width: 150px;
+    padding: 5px;
+    background: #2c303a;
+    color: #ddd;
+    font-size: 25px;
+    transition: 0.5s ease-out;
+}
+#quit:active , #restart:active , #quit:hover  , #restart:hover{
+    background: #3d404f;
+}

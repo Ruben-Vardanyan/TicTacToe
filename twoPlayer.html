@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta property="og:title" content="My Calculator">
+	<title>My Calculator</title>
+	<link rel="icon" sizes="32x32" type="image/png" href="titleImg.png">
+	<meta property="og:description" content="Calculator Demo">
+	<meta name="description" content="By Ruben Vardanyan">
+	<meta name="theme-color" content="#131417">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&amp;display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="twoplayer.css">
+    <link rel="stylesheet" href="phone.css">
+    <link rel="stylesheet" href="loader.css">
+</head>
+<body>
+    <!-- loader -->
+    <div class="loader-wrapper"  >
+        <div class="loader-inner">
+            <img class="s1" src="LogoL.png" alt="">
+        </div>
+    </div>
+    <!-- loader end -->
+    <div class="content">
+       <div class="countBox">
+           <div>
+                <span class="Xcount">X</span>
+                <span class="bgSpan" id="XcountId">0</span>
+           </div>
+           <div>
+                <span class="bgSpan" id="OcountId">0</span> 
+                <span class="Ocount">O</span>
+           </div>
+       </div>
+       <div class="gameTable">
+            <div cellIndex="0" class="cell"></div>
+            <div cellIndex="1" class="cell"></div>
+            <div cellIndex="2" class="cell"></div>
+            <div cellIndex="3" class="cell"></div>
+            <div cellIndex="4" class="cell"></div>
+            <div cellIndex="5" class="cell"></div>
+            <div cellIndex="6" class="cell"></div>
+            <div cellIndex="7" class="cell"></div>
+            <div cellIndex="8" class="cell"></div>
+        </div>
+        
+        <button id="restart">Restart</button>
+        <button id="quit">Quit</button>
+    </div>
+
+
+
+
+    <!-- <script src="menuPage.js"></script> -->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(window).on("load",function(){
+            $(".loader-wrapper").fadeOut("slow");
+        });
+
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
