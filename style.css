@@ -111,6 +111,7 @@ div{
 }
 .content h3{
     position: absolute;
+	font-size: 15px;
 	bottom: 5%;
 }
 .content button{
