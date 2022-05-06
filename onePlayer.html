@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta property="og:title" content="My Tic Tac Toe">
-	<title>TicTacToe</title>
+	<title>TicTacToe Two Player</title>
 	<link rel="icon" sizes="32x32" type="image/png" href="titleImg.png">
 	<meta property="og:description" content="My Tic Tac Toe">
 	<meta name="description" content="By Ruben Vardanyan">
@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="twoplayer.css">
     <link rel="stylesheet" href="phone.css">
     <link rel="stylesheet" href="loader.css">
-
 </head>
 <body>
     <!-- loader -->
@@ -27,31 +26,45 @@
     </div>
     <!-- loader end -->
     <div class="content">
-        <a class="abs-box" href="https://ruben-vardanyan.github.io/MyLibrary/">
-			<img src="LogoL.png">
-		</a>
-        <div class="mainTable">
-            <div class="bgTable"></div>
-            <div class="mainCell">X</div>
-            <div class="mainCell">O</div>
-            <div class="mainCell">O</div>
-            <div class="mainCell">X</div>
+        <div class="winnerBox">
+            <h2></h2>
+            <button id="restart2">Play Again</button>
+            <button id="quit2">Quit</button>
         </div>
-        <h1>Tic Tac Toe</h1>
-        <button id="onePlayer">One Player</button>
-        <button id="twoPlayer">Two Player</button>
-        <h3>&copy; 2022</h3>
+       <div class="countBox">
+           <div>
+                <span class="Xcount">X</span>
+                <span class="bgSpan" id="XcountId">0</span>
+           </div>
+           <div>
+                <span class="bgSpan" id="OcountId">0</span> 
+                <span class="Ocount">O</span>
+           </div>
+       </div>
+       <div class="gameTable">
+            <div cellIndex="0" class="cell"></div>
+            <div cellIndex="1" class="cell"></div>
+            <div cellIndex="2" class="cell"></div>
+            <div cellIndex="3" class="cell"></div>
+            <div cellIndex="4" class="cell"></div>
+            <div cellIndex="5" class="cell"></div>
+            <div cellIndex="6" class="cell"></div>
+            <div cellIndex="7" class="cell"></div>
+            <div cellIndex="8" class="cell"></div>
+        </div>
+        <button id="restart">Restart</button>
+        <button id="quit">Quit</button>
+        
     </div>
 
 
-
-
-    <script src="menuPage.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
         $(window).on("load",function(){
             $(".loader-wrapper").fadeOut("slow");
         });
+
     </script>
+    <script src="script2.js"></script>
 </body>
 </html>

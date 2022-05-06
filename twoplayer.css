@@ -22,6 +22,7 @@
     border-radius: 10px;
     text-align: center;
     margin: 0 5px;
+    padding-top: 2px;
 }
 .Xcount{
     color: #47cf73;
@@ -48,7 +49,7 @@
     box-shadow: 0 0 0 2px #fff;
 }
 
-#quit , #restart{
+#quit , #restart, #quit2{
     width: 150px;
     padding: 5px;
     background: #2c303a;
@@ -58,4 +59,24 @@
 }
 #quit:active , #restart:active , #quit:hover  , #restart:hover{
     background: #3d404f;
+}
+.winnerBox{
+    position: absolute;
+    top:0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    background:rgba(19,20,23,1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%);
+    transition: 0.5s transform;
+}
+.winnerBox h2{
+    font-size: 30px;
+    background-image: linear-gradient(to right,#47cf73, #26c5c6);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 }

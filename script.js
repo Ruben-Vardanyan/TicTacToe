@@ -1,10 +1,15 @@
 console.log("wegewg")
 const restartBtn = document.querySelector('#restart')
 const quitBtn = document.querySelector('#quit')
+const restartBtn2 = document.querySelector('#restart2')
+const quitBtn2 = document.querySelector('#quit2')
+
 
 const cells = document.querySelectorAll(".cell")
 const XcountId = document.querySelector("#XcountId")
 const OcountId = document.querySelector("#OcountId")
+const winnerBox = document.querySelector('.winnerBox')
+const winnerText = document.querySelector('.winnerBox h2')
 cells.forEach(cell => cell.textContent = "")
 // let Xid = 0;
 // let Oid = 0;
@@ -99,16 +104,18 @@ function checkWinner(){
         changePlayer()
         running = true
     }
-    if(OcountId.textContent >= 8 || XcountId.textContent >= 8){
+    if(OcountId.textContent >= 4 || XcountId.textContent >= 4){
         //changePlayer()
         running = false  
         setTimeout(() => {
             for (let index = 0; index < 15; index++) {
                 console.log(index)
             }
-            restartGame(false);
+            winnerBox.style.transform = `translateY(0)`;
+            winnerText.textContent = `${player} WON`
+            // restartGame(false);
         },500 );
-
+        
     }
 }
 function restartGame(continueGame){
@@ -127,12 +134,21 @@ function restartGame(continueGame){
         XcountId.textContent = 0
         OcountId.textContent = 0
     }
+    winnerBox.style.transform = `translateY(-100%)`;
+    winnerText.textContent = ``
 }
 
 restartBtn.addEventListener("click", () =>{
     restartGame(false)
 })
 quitBtn.addEventListener("click", () =>{
+    restartGame(false)
+    window.open("index.html","_self");
+})
+restartBtn2.addEventListener("click", () =>{
+    restartGame(false)
+})
+quitBtn2.addEventListener("click", () =>{
     restartGame(false)
     window.open("index.html","_self");
 })
