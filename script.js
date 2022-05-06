@@ -74,7 +74,7 @@ function checkWinner(){
         else{
             OcountId.textContent = Number(OcountId.textContent)+1
         }
-        changePlayer()
+        //changePlayer()
         running = false;
         
         setTimeout(() => {
@@ -85,7 +85,7 @@ function checkWinner(){
         },500 );
     }
     else if(!options.includes("") ){
-        changePlayer()
+        //changePlayer()
         running = false  
         setTimeout(() => {
             for (let index = 0; index < 15; index++) {
@@ -100,7 +100,7 @@ function checkWinner(){
         running = true
     }
     if(OcountId.textContent >= 8 || XcountId.textContent >= 8){
-        changePlayer()
+        //changePlayer()
         running = false  
         setTimeout(() => {
             for (let index = 0; index < 15; index++) {
