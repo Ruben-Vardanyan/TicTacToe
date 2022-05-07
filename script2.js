@@ -127,15 +127,12 @@ function computer(){
                 checked = true
                 break
             } else if(cell1 == cell2 && cell2 == "" && cell3 == ""){
-                cellClicked(cells[condition[2]])
-                checked = true
-                break
-            } else if(cell1 == cell2 && cell2 == "" && cell3 == ""){
-                cellClicked(cells[condition[2]])
-                checked = true
-                break
-            } else if(cell1 == cell2 && cell2 == "" && cell3 == ""){
-                cellClicked(cells[condition[2]])
+                // very hard version
+                if(cells[4].textContent == ""){
+                    cellClicked(cells[4])
+                }else{
+                    cellClicked(cells[condition[rand(0,3)]])
+                }
                 checked = true
                 break
             } 
